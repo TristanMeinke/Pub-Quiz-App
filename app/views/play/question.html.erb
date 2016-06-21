@@ -1,0 +1,41 @@
+<div id="title">
+<%= image_tag("TAStars.jpg", :alt => "Banner") %> <%= @round.title%>
+</div>
+
+
+	<div class="sidebar left">
+			
+				<% if @counter == "0" %> 
+					<h1><%= link_to image_tag("<_arrow.png", :alt => "Banner"), {:controller => "play", :action => "round", :game => @game.id} %></h1>
+
+				<% else %> 
+					<h1><%= link_to image_tag("<_arrow.png", :alt => "Banner"), {:controller => "play", :action => "question", :game => @game.id, :round => @round.id, :counter => (@counter.to_i() - 1)} %></h1>
+
+				<% end %>
+
+			</div>
+
+
+			<div  class="sidebar right">
+			
+					<% if @counter == "6" %> 
+						<h1><%= link_to image_tag(">_arrow.png", :alt => "Banner"), {:controller => "play", :action => "round", :game => @game.id} %></h1>
+					<% else %> 
+							<h1><%= link_to image_tag(">_arrow.png", :alt => "Banner"), {:controller => "play", :action => "question", :game => @game.id, :round => @round.id, :counter => (@counter.to_i() + 1)} %> </h1>
+					<% end %> 
+			</div>
+
+
+			<div  class="content main">
+			<dix id="ques"> 
+				
+				   Question: 
+				<%=@question.questiontext %> 
+			</dix>
+			<div id="answ"> 
+				<br/>
+			
+				<%= link_to "Answer:", {:controller => "play", :action => "answer", :game => @game.id, :round => @round.id, :counter => @counter, :question => @question} %>
+			</div>
+
+</div>

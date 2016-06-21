@@ -1,0 +1,34 @@
+<%= form_for @game do |f| %> 
+
+	<p> 
+		<div class = "text">
+			<%= f.label :name %><br>
+		</div>
+		<%= f.text_area :name %> 
+	</p>
+
+	<p> 
+		<div class = "text">
+			<label>Rounds in Game:</label>
+					<!-- //using categories = game
+					//concern = round -->
+					
+				
+					<br><%= hidden_field_tag "game[game_ids][]", nil %>
+					<% Round.all.sort_by{|round| round.title}.each do |round| %> 				
+						<%= check_box_tag "game[round_ids][]", round.id, 
+						@game.rounds.include?(round), id: dom_id(round)%>
+						<%= label_tag dom_id(round), round.title%></br>
+
+
+					<% end %> 
+					
+
+				<br/>
+		</div>
+	</p>
+<%= f.submit class: "btn btn-success btn-sm" %>
+
+<% end %> 
+<br>
+<%= link_to 'Return to Game List', play_game_path, class: 'btn btn-primary btn-sm'  %>

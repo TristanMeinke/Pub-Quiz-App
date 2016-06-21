@@ -1,0 +1,28 @@
+<div id="title">
+<%= image_tag("TABlueStars.jpg", :alt => "Banner") %> <%= @game.name %>
+</div>
+
+<div class="page">
+
+
+	<div class = "rounds text-left">
+		<table> 
+			<!-- This loop now written in preferred ruby syntax.--> 
+			<% @rounds.each do |round| %> <!-- RUBYISH -->
+				<tr> 	
+					<td>
+						✽ <%= link_to round.title, {:controller => "play", :action => "question", :game => @game.id, :round => round.id, :counter => 0} %>
+					</td>
+				</tr>
+			<% end %> 
+		</table>
+	</div>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- The following link needs to be prettied up -->
+<%= link_to play_game_path  do %>
+	<i class="glyphicon glyphicon-star-empty"></i>
+<% end %>
+<br><br><br><br>

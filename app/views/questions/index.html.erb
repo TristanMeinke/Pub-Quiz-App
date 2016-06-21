@@ -1,0 +1,67 @@
+<div class = "page">
+	
+	<div class="heading">
+	<%= image_tag("TABanner3.jpg", :alt => "Banner") %>
+	<center>All Questions</center><br>
+	</div> 
+	
+	<center>
+	<p>
+  		<%= link_to play_game_path, class: 'btn btn-nav'  do%>
+			<i class="glyphicon glyphicon-circle-arrow-left"></i> Games
+		<% end %>
+		<%= link_to new_question_path, class: 'btn btn-new' do %>
+			<i class="glyphicon glyphicon-plus"></i> Add Question
+		<% end %>
+		<%= link_to play_index_path, class: 'btn btn-gray' do %>
+			<i class="glyphicon glyphicon-align-justify"></i> Main Menu
+		<% end %>
+		<%= link_to rounds_path, class: 'btn btn-nav btn-raised' do %>
+			<i class="glyphicon glyphicon-circle-arrow-right"></i> Rounds 
+		<% end %>
+		
+	</p>
+	</center>
+
+	<table class="table table-hover"> 
+		<thead bgcolor="#6bbeff">
+			<tr> 
+				<th>No.</th> 
+				<th>ID</th>
+				<th></th>
+				<th>Question</th>
+				<th>Answer</th>
+				<th>Partial Answer</th>
+				<th>Point Value</th>
+				<th>Partial Points</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% i = 1 %>
+			 <% @questions.each do |ques| %>
+					<tr>
+						<td> <%= i %> </td>
+						<% i = i.to_i() + 1 %> <!-- Casts the iterator from string to integer, so it can be incremented. -->
+						<td><%= ques.id %></td> <!-- This line adds question ids to the question index. -->
+						<td>
+							<%= link_to edit_question_path(ques) , class: 'btn btn-edit btn-xs' do %>
+								<i class="glyphicon glyphicon-pencil"></i> Edit
+							<% end %>
+							<%= link_to ques,
+		            		  method: :delete,
+		            		  data: { confirm: 'Are you sure you want to destroy this question?' }, class: 'btn btn-gray btn-xs' do %>
+		            		    <i class="glyphicon glyphicon-remove"></i> Delete
+							<% end %>
+		          		</td>
+						<td> <%= link_to ques.questiontext, ques %> </td>
+						<td> <%= ques.answertext %> </td> 
+						<td> <%= ques.partialanswer %> </td> 
+						<td> <%= ques.pointval %> </td> 
+						<td> <%= ques.partialpoints %> </td> 
+						
+					</tr>
+			<% end %>
+		</tbody> 
+	</table>
+
+</div>

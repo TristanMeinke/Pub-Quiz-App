@@ -1,0 +1,17 @@
+<%= image_tag("TABlueStars.jpg", :alt => "Banner") %>
+<div class="page">
+
+<br/> <br/><br/> <br/><br/> <br/><br/> <br/><br/> <br/>
+
+	<div class="start text-center">
+		<%= link_to "START GAME", {:controller => "play", :action => "round", :game => @game.id} %><br>
+	</div>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- The following link needs to be prettied up -->
+<%= link_to play_game_path  do %>
+	<i class="glyphicon glyphicon-star-empty"></i>
+<% end %>
+<br><br><br><br>

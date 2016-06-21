@@ -1,0 +1,189 @@
+// Place all the styles related to the play controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+body {
+ background: url("BlueSky2.jpg") repeat;} 
+
+#title {
+	color: #FFFFFF; /* white */
+	font-size: 400%; 
+	font-family: futura; 
+	margin: 0 30px; 
+}
+
+.container-fluid > .sidebar {
+
+    top: 0;
+    left:auto;
+    width: 220px; /* width of sidebar */
+
+}
+
+.left {
+    float:left;
+    margin: 200px 30px; 
+
+
+	color: #FFFFFF; /* white */
+	/* unvisited link */
+	a:link {
+	    color: #FFFFFF; /* white */
+	}
+
+	/* visited link */
+	a:visited {
+	    color: #FFFFFF; /* white */
+	}
+
+	/* mouse over link */
+	a:hover {
+	   color: #FFFFFF; /* white */
+	}
+
+	/* selected link */
+	a:active {
+	    color: #FFFFFF; /* white */
+	}
+
+}
+
+.right {
+    float:right;
+    margin: 200px 30px; 
+
+
+
+	color: #FFFFFF; /* white */
+	/* unvisited link */
+	a:link {
+	   color: #FFFFFF; /* white */
+	}
+
+	/* visited link */
+	a:visited {
+	    color: #FFFFFF; /* white */
+	}
+
+	/* mouse over link */
+	a:hover {
+	   color: #FFFFFF; /* white */
+	}
+
+	/* selected link */
+	a:active {
+	   color: #FFFFFF; /* white */
+	}
+}
+
+.container-fluid > .content {
+    
+    margin: 0 500px; /* width of sidebars + 10px of margin */
+
+    
+}
+
+.main {
+    margin: 50px 200px; 
+    
+    font-size: 250%;
+    font-family: futura; 
+
+}
+
+.rounds {
+	margin: 50px 0 0 200px; 
+	font-size: 200%; 
+	 font-family: futura; 
+
+		color: #FFFFFF; /* white */
+	/* unvisited link */
+	a:link {
+	    color: #FFFFFF; /* white */
+	}
+
+	/* visited link */
+	a:visited {
+	    color: #FFFFFF; /* white */
+	}
+
+	/* mouse over link */
+	a:hover {
+	    color: #FFFFFF; /* white */
+	}
+
+	/* selected link */
+	a:active {
+	    color: #FFFFFF; /* white */
+	}
+
+}
+
+
+
+.start {
+
+	font-size: 800%; 
+	 font-family: futura; 
+
+	color: #EC1C4B; /* red */
+	/* unvisited link */
+	a:link {
+	    color: #FFFFFF; /* white */
+	}
+
+	/* visited link */
+	a:visited {
+	    color: #FFFFFF; /* white */
+	}
+
+	/* mouse over link */
+	a:hover {
+	    color: #FFFFFF; /* white */
+	}
+
+	/* selected link */
+	a:active {
+	    color: #FFFFFF; /* white */
+	}
+}
+
+#ques { 
+	color: #FFFFFF; /* white */
+
+
+}
+
+#answ {
+
+	color: #FFFFFF; /* white */
+	/* unvisited link */
+	a:link {
+	   color: #FFFFFF; /* white */
+	}
+
+	/* visited link */
+	a:visited {
+	    color: #FFFFFF; /* white */
+	}
+
+	/* mouse over link */
+	a:hover {
+	    color: #FFFFFF; /* white */
+	}
+
+	/* selected link */
+	a:active {
+	    color: #FFFFFF; /* white */
+	}
+}
+
+#points {
+	color: #FFFFFF; /* white */
+	font-size: 75%; 
+
+}
+

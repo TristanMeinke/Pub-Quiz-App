@@ -1,0 +1,47 @@
+<%= form_for @round do |f| %>
+
+<!-- Navigation Bar -->
+
+<center>
+	<p>
+		<%= link_to rounds_path, class: 'btn btn-nav' do  %>
+		      <i class="glyphicon glyphicon-circle-arrow-up"></i> Rounds
+		<% end %>
+
+	<%= if @round.game then link_to game_path(@round.game), class: 'btn btn-nav' do %>
+			<i class="glyphicon glyphicon-circle-arrow-up"></i> Associated Game
+		<% end %>
+	<% end %>
+	<br>
+	</p>
+</center>
+
+	<p> 
+		<div class = "heading">
+			<h3><%= f.label :title %></h3>
+		</div>
+		<%= f.text_area :title %> 
+	</p>
+
+	<p> 
+		<div class = "text">
+			<h3><label>Questions Available:</label></h3>
+
+
+				<br><%= hidden_field_tag "round[round_ids][]", nil %>
+				<% Question.all.sort_by{|question| question.questiontext}.each do |question| %> 				
+				<%= check_box_tag "round[question_ids][]", question.id, 
+				@round.questions.include?(question), id: dom_id(question)%>
+				<%= label_tag dom_id(question), question.questiontext%></br>
+					
+				<% end %>
+
+				<br/>
+		</div>
+	</p>
+
+<%= f.submit class: "btn btn-success btn-sm" %>
+
+<% end %> 
+
+<br>

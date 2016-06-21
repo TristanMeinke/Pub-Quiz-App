@@ -1,0 +1,76 @@
+  <!-- <strong>Round:</strong> -->
+<div class="page">
+	<div class="heading">
+	<%= image_tag("TABanner3.jpg", :alt => "Banner") %>
+	<center><h2><%= @round.title%></h2></center>
+	<br>
+	</div> 
+
+<!-- <H3><%= @round.title %></H3> -->
+
+<!-- Navigation Bar -->
+<center>
+<p>
+<%= link_to rounds_path , class: 'btn btn-nav' do %>
+	<i class="glyphicon glyphicon-circle-arrow-up"></i> Rounds
+<% end %>
+
+<%= if @round.game then link_to game_path(@round.game), class: 'btn btn-nav' do %>
+			<i class="glyphicon glyphicon-circle-arrow-up"></i> Associated Game
+		<% end %>
+	<% end %>
+<!-- The above link needs a condition for questions which are not yet associated with a round. -->
+<%= link_to edit_round_path , class: 'btn btn-gray' do %>
+   <i class="glyphicon glyphicon-pencil"></i> Edit
+<% end %>
+
+<%= link_to round_path(@round),
+              method: :delete,
+              data: { confirm: 'Are you sure you want to destroy this round?' } , class: 'btn btn-gray' do %>
+          				<i class="glyphicon glyphicon-remove"></i> Delete
+  					<% end %>
+</p>
+</center>
+
+<table class="table table-hover">
+	<thead bgcolor="#6bbeff">
+		<tr>
+			<th>No.</th>
+			<th>ID</th>
+			<th></th>
+			<th>Question</th>
+			<th>Answer</th>
+			<th>Partial Answer</th>
+			<th>Point Value</th>
+			<th>Partial Points</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr>
+			<% i = 1 %>
+			<% @round.questions.each do |ques| %> <!-- Not sure if this is great syntax... -->
+					<td> <%= i %> </td>
+					<% i = i.to_i() + 1 %> <!-- Casts the iterator from string to integer, so it can be incremented. -->
+					<td> <%= ques.id %> </td>
+						<td> 
+						<%= link_to edit_question_path(ques), class: 'btn btn-gray btn-xs' do %>
+						  	<i class="glyphicon glyphicon-pencil"></i> Edit
+						<% end %>
+						<%= link_to question_path(ques),
+				              method: :delete,
+				              data: { confirm: 'Are you sure you want to destroy this question?' } , class: 'btn btn-gray btn-xs' do %>
+				             <i class="glyphicon glyphicon-remove"></i> Delete
+						<% end %>
+					</td>
+					<td> <%= link_to ques.questiontext, ques %> </td>
+					<td> <%= ques.answertext %></td>
+					<td> <%= ques.partialanswer %> </td> 
+					<td> <%= ques.pointval %> </td> 
+					<td> <%= ques.partialpoints %> </td> 
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+
+</div>

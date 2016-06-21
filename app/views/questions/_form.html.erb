@@ -1,0 +1,57 @@
+<%= form_for @question do |f| %>
+
+<!-- Navigation Bar	-->
+<center>
+<p>
+    <%= link_to questions_path, class: 'btn btn-nav' do %>
+      <i class="glyphicon glyphicon-circle-arrow-up"></i> Question Repository
+    <% end %>
+
+
+	<%= if @question.round then link_to round_path(@question.round), class: 'btn btn-nav' do %>
+			<i class="glyphicon glyphicon-circle-arrow-up"></i> Associated Round
+		<% end %>
+	<% end %>
+
+
+</p>
+</center>
+
+	<div class = "text">
+		<%= f.label :questiontext, "Question" %><br/>
+	</div>
+		<%= f.text_area :questiontext %><br/>
+
+	<div class = "text">
+		<%= f.label :answertext, "Answer" %><br/>
+	</div>
+		<%= f.text_area :answertext %><br/>
+
+	<div class = "text">
+		<%= f.label :partialanswer, "Partial Answer" %><br/>
+	</div>
+		<%= f.text_area :partialanswer %><br/>
+
+	<div class = "text">
+		<%= f.label :difficulty, "Difficulty" %><br/>
+	</div>
+		<%= f.text_field :difficulty %><br/>
+
+	<div class = "text">
+		<%= f.label :pointval, "Points" %><br/>
+	</div>
+		<%= f.text_field :pointval %><br/>
+
+	<div class = "text">
+		<%= f.label :partialpoints, "Partial Points" %><br/>
+	</div>
+		<%= f.text_field :partialpoints %><br/>
+
+	<div class = "text">
+		<%= f.label :notes, "Notes" %><br/>
+	</div>
+		<%= f.text_area :notes %><br/>
+
+		<br><%= f.submit class: 'btn btn-sm btn-success'%>
+
+<% end %> 

@@ -1,0 +1,11 @@
+<h2>Choose a Game</h2>
+
+<table> 
+<% for game in @games %> 
+	<tr> 	
+		<td>
+			<%= link_to game.title, {:controller = "play", :action => "round" :game => game.id} %>
+		</td>
+	</tr>
+<% end %> 
+</table>

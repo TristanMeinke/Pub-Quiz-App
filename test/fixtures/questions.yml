@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  questiontext: MyText
+  answertext: MyText
+  partialanswer: MyText
+  notes: MyText
+  pointval: 1
+  difficulty: 1
+  partialpoints: 1
+  isanswered: false
+
+two:
+  questiontext: MyText
+  answertext: MyText
+  partialanswer: MyText
+  notes: MyText
+  pointval: 1
+  difficulty: 1
+  partialpoints: 1
+  isanswered: false

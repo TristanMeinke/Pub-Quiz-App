@@ -1,0 +1,102 @@
+<div class="page">
+
+<%= image_tag("TABanner3.jpg", :alt => "Banner") %>
+
+<!-- Navigation Bar -->
+<center>
+  <p>
+    <%= link_to questions_path, class: 'btn btn-nav' do %>
+      <i class="glyphicon glyphicon-circle-arrow-up"></i> Question Repository
+    <% end %>
+
+    <%= if @question.round
+    link_to 'View Associated Round', round_path(@question.round), class: 'btn btn-nav' 
+    end %> <!-- This button needs updating. -->
+   
+    <%= link_to edit_question_path, class: 'btn btn-gray' do %>
+      <i class="glyphicon glyphicon-pencil"></i> Edit
+    <% end %>
+   
+    <%= link_to question_path(@question),
+                  method: :delete,
+                  data: { confirm: 'Are you sure you want to destroy this question?' } , class: 'btn btn-gray' do %>
+      <i class="glyphicon glyphicon-remove"></i> Delete
+    <% end %>
+  </p>
+</center>
+
+<table>
+  <tbody>
+    
+    <td>
+
+      <div class = "heading">
+        <strong><h3>Question:</h3></strong>
+      </div>
+      <div class = "text">
+        <%= @question.questiontext %>
+      </div>
+  
+
+      <div class = "heading">
+        <strong><h3>Answer:</h3></strong>
+      </div>
+      <div class = "text">
+        <%= @question.answertext %>
+      </div>
+    </td>
+
+    <td>
+      <div class = "heading">
+        <strong><h3>Partial Answer:</h3></strong>
+      </div>
+      <div class = "text">
+        <%= @question.partialanswer %>
+      </div>
+
+      <div class = "heading">
+        <strong><h3>Notes:</h3></strong>
+      </div>
+      <div class = "text">
+        <%= @question.notes %>
+      </div>
+    </td>
+
+    <td>
+      <div class = "heading">
+        <strong><h3>Point Value:</h3></strong>
+      </div>
+      <div class = "text">
+        <%= @question.pointval %>
+      </div>
+  
+
+      <div class = "heading">
+        <strong><h3>Partial Points:</h3></strong>
+      </div>
+      <div class = "text">
+        <%= @question.partialpoints %>
+      </div>
+    </td>
+
+    <td>
+      <div class = "heading">
+        <strong><h3>Difficulty:</h3></strong>
+      </div>
+      <div class = "text">
+        <%= @question.difficulty %>
+      </div>
+
+      <div class = "heading">
+        <strong><h3>ID:</h3></strong>
+      </div>
+      <div class = "text">
+        <%= @question.id %>
+      </div>
+    
+    </td>
+
+  </tbody>
+<table>
+
+</div>

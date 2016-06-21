@@ -1,0 +1,62 @@
+<div class = "page">
+	
+	<div class="heading">
+	<%= image_tag("TABanner3.jpg", :alt => "Banner") %>
+	<center>Choose a Game</center><br>
+	</div> 
+
+	<!-- ***Navigation Bar*** -->
+	<center><p>
+	<%= link_to rounds_path, class: 'btn btn-nav' do %>
+		<i class="glyphicon glyphicon-circle-arrow-left"></i> Rounds
+	<% end %>
+	<%= link_to new_game_path, class: 'btn btn-new' do %>
+		<i class="glyphicon glyphicon-plus"></i> Create Game
+	<% end %>
+	<%= link_to play_index_path, class: 'btn btn-gray' do %>
+		<i class="glyphicon glyphicon-align-justify"></i> Main Menu
+	<% end %>
+	<%= link_to questions_path , class: 'btn btn-nav' do %>
+		<i class="glyphicon glyphicon-circle-arrow-right"></i> Questions
+	<% end %>
+	</p></center>
+
+	<table class="table table-hover"> 
+		<thead bgcolor="#6bbeff">
+			<tr>
+				<th>No.</th> 
+				<th>ID</th>
+				<th>Game Title</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>	
+			<% i = 1 %>
+			<% @games.each do |game| %> <!-- RUBYISH -->
+				<tr> 
+					<td> <%= i %> </td>
+					<% i = i.to_i() + 1 %> <!-- Casts the iterator from string to integer, so it can be incremented. -->
+					<td>
+						<%= game.id %> <!-- Adds numbers to the list of available games. -->
+					</td>	
+					<td>
+						<%= link_to game.name, game_path(game) %>
+					</td>
+					<td>
+						<%= link_to 'Play', {:controller => "play", :action => "start", :game => game.id}, class: 'btn btn-success btn-xs' %>
+						
+						<%= link_to edit_game_path(game), class: 'btn btn-gray btn-xs' do %>
+							<i class="glyphicon glyphicon-pencil"></i> Edit
+						<% end %>
+
+						<%= link_to game_path(game),
+			             		method: :delete,
+			              		data: { confirm: 'Are you sure you want to destroy this game?' }, class: 'btn btn-gray btn-xs' do %>
+			              		  <i class="glyphicon glyphicon-remove"></i> Delete
+							<% end %>
+		          	</td>
+				</tr>
+		<% end %> 
+		</tbody>
+	</table>
+</div>

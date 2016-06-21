@@ -1,0 +1,393 @@
+/* Navigation button */
+
+.btn-nav { 
+  color: #000000; 
+  background-color: #A0A4FA; 
+  border-color: #000000;
+} 
+ 
+.btn-nav:hover, 
+.btn-nav:focus, 
+.btn-nav:active, 
+.btn-nav.active, 
+.open .dropdown-toggle.btn-nav { 
+  color: #000000; 
+  background-color: #8385FC; 
+  border-color: #000000;
+} 
+ 
+.btn-nav:active, 
+.btn-nav.active, 
+.open .dropdown-toggle.btn-nav { 
+  background-image: none; 
+} 
+ 
+.btn-nav.disabled, 
+.btn-nav[disabled], 
+fieldset[disabled] .btn-nav, 
+.btn-nav.disabled:hover, 
+.btn-nav[disabled]:hover, 
+fieldset[disabled] .btn-nav:hover, 
+.btn-nav.disabled:focus, 
+.btn-nav[disabled]:focus, 
+fieldset[disabled] .btn-nav:focus, 
+.btn-nav.disabled:active, 
+.btn-nav[disabled]:active, 
+fieldset[disabled] .btn-nav:active, 
+.btn-nav.disabled.active, 
+.btn-nav[disabled].active, 
+fieldset[disabled] .btn-nav.active { 
+  background-color: #A0A4FA; 
+  border-color: #000000; 
+} 
+ 
+.btn-nav .badge { 
+  color: #A0A4FA; 
+  background-color: #FFFFFF; 
+}
+
+/* New button */
+
+
+.btn-new { 
+  color: #FFFFFF; 
+  background-color: #545DFF; 
+  border-color: #000000; 
+} 
+ 
+.btn-new:hover, 
+.btn-new:focus, 
+.btn-new:active, 
+.btn-new.active, 
+.open .dropdown-toggle.btn-new { 
+  color: #FFFFFF; 
+  background-color: #4749ED; 
+  border-color: #000000; 
+} 
+ 
+.btn-new:active, 
+.btn-new.active, 
+.open .dropdown-toggle.btn-new { 
+  background-image: none; 
+} 
+ 
+.btn-new.disabled, 
+.btn-new[disabled], 
+fieldset[disabled] .btn-new, 
+.btn-new.disabled:hover, 
+.btn-new[disabled]:hover, 
+fieldset[disabled] .btn-new:hover, 
+.btn-new.disabled:focus, 
+.btn-new[disabled]:focus, 
+fieldset[disabled] .btn-new:focus, 
+.btn-new.disabled:active, 
+.btn-new[disabled]:active, 
+fieldset[disabled] .btn-new:active, 
+.btn-new.disabled.active, 
+.btn-new[disabled].active, 
+fieldset[disabled] .btn-new.active { 
+  background-color: #545DFF; 
+  border-color: #000000; 
+} 
+ 
+.btn-new .badge { 
+  color: #545DFF; 
+  background-color: #FFFFFF; 
+}
+
+/* Gray Button */
+
+.btn-gray { 
+  color: #000000; 
+  background-color: #BBBBBB; 
+  border-color: #000000;
+} 
+ 
+.btn-gray:hover, 
+.btn-gray:focus, 
+.btn-gray:active, 
+.btn-gray.active, 
+.open .dropdown-toggle.btn-gray { 
+  color: #000000; 
+  background-color: #999999; 
+  border-color: #000000; 
+} 
+ 
+.btn-gray:active, 
+.btn-gray.active, 
+.open .dropdown-toggle.btn-gray { 
+  background-image: none; 
+} 
+ 
+.btn-gray.disabled, 
+.btn-gray[disabled], 
+fieldset[disabled] .btn-gray, 
+.btn-gray.disabled:hover, 
+.btn-gray[disabled]:hover, 
+fieldset[disabled] .btn-gray:hover, 
+.btn-gray.disabled:focus, 
+.btn-gray[disabled]:focus, 
+fieldset[disabled] .btn-gray:focus, 
+.btn-gray.disabled:active, 
+.btn-gray[disabled]:active, 
+fieldset[disabled] .btn-gray:active, 
+.btn-gray.disabled.active, 
+.btn-gray[disabled].active, 
+fieldset[disabled] .btn-gray.active { 
+  background-color: #BBBBBB; 
+  border-color: #000000; 
+} 
+ 
+.btn-gray .badge { 
+  color: #BBBBBB; 
+  background-color: #000000; 
+}
+
+/* Purple Button */
+
+.btn-purple { 
+  color: #FFFFFF; 
+  background-color: #906EBD; 
+  border-color: #260269; 
+} 
+ 
+.btn-purple:hover, 
+.btn-purple:focus, 
+.btn-purple:active, 
+.btn-purple.active, 
+.open .dropdown-toggle.btn-purple { 
+  color: #FFFFFF; 
+  background-color: #49247A; 
+  border-color: #260269; 
+} 
+ 
+.btn-purple:active, 
+.btn-purple.active, 
+.open .dropdown-toggle.btn-purple { 
+  background-image: none; 
+} 
+ 
+.btn-purple.disabled, 
+.btn-purple[disabled], 
+fieldset[disabled] .btn-purple, 
+.btn-purple.disabled:hover, 
+.btn-purple[disabled]:hover, 
+fieldset[disabled] .btn-purple:hover, 
+.btn-purple.disabled:focus, 
+.btn-purple[disabled]:focus, 
+fieldset[disabled] .btn-purple:focus, 
+.btn-purple.disabled:active, 
+.btn-purple[disabled]:active, 
+fieldset[disabled] .btn-purple:active, 
+.btn-purple.disabled.active, 
+.btn-purple[disabled].active, 
+fieldset[disabled] .btn-purple.active { 
+  background-color: #906EBD; 
+  border-color: #260269; 
+} 
+ 
+.btn-purple .badge { 
+  color: #906EBD; 
+  background-color: #FFFFFF; 
+}
+
+/* Highlited Buttons follow. 
+Purple highlight button. */
+
+.btn-active_purple { 
+  color: #000000; 
+  background-color: #BBBBBB; 
+  border-color: #000000;
+} 
+ 
+.btn-active_purple:hover, 
+.btn-active_purple:focus, 
+.btn-active_purple:active, 
+.btn-active_purple.active, 
+.open .dropdown-toggle.btn-active_purple { 
+  color: #000000; 
+  background-color: #906EBD; 
+  border-color: #000000; 
+} 
+ 
+.btn-active_purple:active, 
+.btn-active_purple.active, 
+.open .dropdown-toggle.btn-active_purple { 
+  background-image: none; 
+} 
+ 
+.btn-active_purple.disabled, 
+.btn-active_purple[disabled], 
+fieldset[disabled] .btn-active_purple, 
+.btn-active_purple.disabled:hover, 
+.btn-active_purple[disabled]:hover, 
+fieldset[disabled] .btn-active_purple:hover, 
+.btn-active_purple.disabled:focus, 
+.btn-active_purple[disabled]:focus, 
+fieldset[disabled] .btn-active_purple:focus, 
+.btn-active_purple.disabled:active, 
+.btn-active_purple[disabled]:active, 
+fieldset[disabled] .btn-active_purple:active, 
+.btn-active_purple.disabled.active, 
+.btn-active_purple[disabled].active, 
+fieldset[disabled] .btn-active_purple.active { 
+  background-color: #BBBBBB; 
+  border-color: #000000; 
+} 
+ 
+.btn-active_purple .badge { 
+  color: #BBBBBB; 
+  background-color: #000000; 
+}
+
+/* Green highlight button */
+
+.btn-active_green { 
+  color: #000000; 
+  background-color: #BBBBBB; 
+  border-color: #000000;
+} 
+ 
+.btn-active_green:hover, 
+.btn-active_green:focus, 
+.btn-active_green:active, 
+.btn-active_green.active, 
+.open .dropdown-toggle.btn-active_green { 
+  color: #000000; 
+  background-color: #4bc754; 
+  border-color: #000000; 
+} 
+ 
+.btn-active_green:active, 
+.btn-active_green.active, 
+.open .dropdown-toggle.btn-active_green { 
+  background-image: none; 
+} 
+ 
+.btn-active_green.disabled, 
+.btn-active_green[disabled], 
+fieldset[disabled] .btn-active_green, 
+.btn-active_green.disabled:hover, 
+.btn-active_green[disabled]:hover, 
+fieldset[disabled] .btn-active_green:hover, 
+.btn-active_green.disabled:focus, 
+.btn-active_green[disabled]:focus, 
+fieldset[disabled] .btn-active_green:focus, 
+.btn-active_green.disabled:active, 
+.btn-active_green[disabled]:active, 
+fieldset[disabled] .btn-active_green:active, 
+.btn-active_green.disabled.active, 
+.btn-active_green[disabled].active, 
+fieldset[disabled] .btn-active_green.active { 
+  background-color: #BBBBBB; 
+  border-color: #000000; 
+} 
+ 
+.btn-active_green .badge { 
+  color: #BBBBBB; 
+  background-color: #000000; 
+}
+
+/* Blue highlighting button */
+
+.btn-active_blue { 
+  color: #000000; 
+  background-color: #BBBBBB; 
+  border-color: #000000;
+} 
+ 
+.btn-active_blue:hover, 
+.btn-active_blue:focus, 
+.btn-active_blue:active, 
+.btn-active_blue.active, 
+.open .dropdown-toggle.btn-active_blue { 
+  color: #000000; 
+  background-color:  #59a4ff; 
+  border-color: #000000; 
+} 
+ 
+.btn-active_blue:active, 
+.btn-active_blue.active, 
+.open .dropdown-toggle.btn-active_blue { 
+  background-image: none; 
+} 
+ 
+.btn-active_blue.disabled, 
+.btn-active_blue[disabled], 
+fieldset[disabled] .btn-active_blue, 
+.btn-active_blue.disabled:hover, 
+.btn-active_blue[disabled]:hover, 
+fieldset[disabled] .btn-active_blue:hover, 
+.btn-active_blue.disabled:focus, 
+.btn-active_blue[disabled]:focus, 
+fieldset[disabled] .btn-active_blue:focus, 
+.btn-active_blue.disabled:active, 
+.btn-active_blue[disabled]:active, 
+fieldset[disabled] .btn-active_blue:active, 
+.btn-active_blue.disabled.active, 
+.btn-active_blue[disabled].active, 
+fieldset[disabled] .btn-active_blue.active { 
+  background-color: #BBBBBB; 
+  border-color: #000000; 
+} 
+ 
+.btn-active_blue .badge { 
+  color: #BBBBBB; 
+  background-color: #000000; 
+}
+
+
+/* Icon Buttons */
+
+
+.btn-edit { 
+
+  color: #000000; 
+  background-color: #BBBBBB; 
+  border-color: #000000;
+
+    span.icon:before {
+  font-family: 'Glyphicons Halflings';
+  content: "\270f";}
+
+} 
+ 
+.btn-edit:hover, 
+.btn-edit:focus, 
+.btn-edit:active, 
+.btn-edit.active, 
+.open .dropdown-toggle.btn-edit { 
+  color: #000000; 
+  background-color: #999999; 
+  border-color: #000000; 
+} 
+ 
+.btn-edit:active, 
+.btn-edit.active, 
+.open .dropdown-toggle.btn-edit { 
+  background-image: none; 
+} 
+ 
+.btn-edit.disabled, 
+.btn-edit[disabled], 
+fieldset[disabled] .btn-edit, 
+.btn-edit.disabled:hover, 
+.btn-edit[disabled]:hover, 
+fieldset[disabled] .btn-edit:hover, 
+.btn-edit.disabled:focus, 
+.btn-edit[disabled]:focus, 
+fieldset[disabled] .btn-edit:focus, 
+.btn-edit.disabled:active, 
+.btn-edit[disabled]:active, 
+fieldset[disabled] .btn-edit:active, 
+.btn-edit.disabled.active, 
+.btn-edit[disabled].active, 
+fieldset[disabled] .btn-edit.active { 
+  background-color: #BBBBBB; 
+  border-color: #000000; 
+} 
+ 
+.btn-edit .badge { 
+  color: #BBBBBB; 
+  background-color: #000000; 
+}

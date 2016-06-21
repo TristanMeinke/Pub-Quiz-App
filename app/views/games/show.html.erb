@@ -1,0 +1,48 @@
+<div class="page">
+
+<%= image_tag("TABanner3.jpg", :alt => "Banner") %>
+<div class="heading">
+	<center><%= @game.name %><center>
+</div>
+
+<!-- Navigation Bar -->
+<center>
+	<p>
+		<%= link_to play_game_path, class: 'btn btn-nav' do %>
+			<i class="glyphicon glyphicon-circle-arrow-up"></i> Games
+		<% end %>
+
+		<%= link_to play_index_path, class: 'btn btn-gray' do %>
+			<i class="glyphicon glyphicon-align-justify"></i> Main Menu
+		<% end %>
+	</p>
+</center>
+
+<table class="table table-hover">
+	<thead bgcolor="#6bbeff">
+		<tr>
+			<th>No.</th>
+			<th>Round ID</th>
+			<th>Round Title</th>
+			<th></th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr>
+			<% i = 1 %>
+			<% @game.rounds.each do |rnd| %>
+					<td> <%= i %> </td>
+					<% i = i.to_i() + 1 %>
+					<td> <%= rnd.id %> </td>
+					<td> <%= link_to rnd.title, rnd %> </td>
+					<td> <%= link_to edit_round_path(rnd), class: 'btn btn-gray btn-xs' do %>
+					<i class="glyphicon glyphicon-pencil"></i> Edit
+					<% end %>
+					</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+
+</div>

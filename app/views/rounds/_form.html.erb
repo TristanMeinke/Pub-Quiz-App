@@ -1,0 +1,124 @@
+<!-- This nested form includes a grid structure, to make it more user friendly.
+As yet, it does not dynamically move to fit the screen, at the mobile level, however. Desktop functionality seems okay at that level, though. -->
+
+<%= nested_form_for @round do |f| %> 
+
+<!-- Navigation Bar -->
+<center>
+	<p>
+		<br><%= link_to rounds_path, class: 'btn btn-sm btn-nav' do %>
+			<i class="glyphicon glyphicon-circle-arrow-up"></i> Rounds
+    	<% end %><br>
+
+		<%= if @round.game then link_to game_path(@round.game), class: 'btn btn-nav' do %>
+			<i class="glyphicon glyphicon-circle-arrow-up"></i> Associated Game
+		<% end %>
+	<% end %><!-- This button contingency may be removed, as edit question may be left as the checkboxes only, once the option is worked out. -->
+	</p>
+</center>
+
+<table class = "table">
+	<thead>
+		<p> 
+		<div class = "heading">	
+			<h2><%= f.label :title %></h2>
+		</div>
+		<%= f.text_area :title %> 
+		</p>
+	</thead>
+
+	<tbody>
+		<div id="main-container" class="container-fluid">
+			<div class = "row">
+				<div id="main content" class="col-md-2">
+
+					<div class = "heading">
+						<H3> Question 1 </H3>
+					</div>
+						<%= f.fields_for :questions do |builder| %> 
+								
+									<%= render "question_fields", :f => builder %>
+									
+						<% end %>
+					<div class = "heading">
+						<H3> Question 2 </H3>
+					</div>
+
+						<%= f.fields_for :questions do |builder| %> 
+								
+							<%= render "question_fields", :f => builder %>
+						
+						<% end %>
+
+				</div>
+				<div id="main content" class="col-md-2">
+					<div class = "row"></div>
+						
+					<div class = "heading">
+						<H3> Question 3 </H3>
+					</div>
+							<%= f.fields_for :questions do |builder| %> 
+								
+							<%= render "question_fields", :f => builder %>
+									
+						<% end %>
+					<div class = "heading">
+						<H3> Question 4 </H3>
+					</div>
+							<%= f.fields_for :questions do |builder| %> 
+								
+							<%= render "question_fields", :f => builder %>
+									
+						<% end %>
+	
+				</div>
+				<div id="main content" class="col-md-2">
+					<div class = "row"></div>
+
+					<div class = "heading">
+						<H3> Question 5 </H3>
+					</div>
+							<%= f.fields_for :questions do |builder| %> 
+								
+							<%= render "question_fields", :f => builder %>
+									
+						<% end %>
+
+					<div class = "heading">
+						<H3> Question 6 </H3>
+					</div>
+							<%= f.fields_for :questions do |builder| %> 
+								
+							<%= render "question_fields", :f => builder %>
+									
+						<% end %>
+
+				</div>
+				<div id="main content" class="col-md-2">
+					<div class = "row"></div>
+						
+					<div class = "heading">
+						<H3> Question 7 </H3>
+					</div>
+							<%= f.fields_for :questions do |builder| %> 
+								
+							<%= render "question_fields", :f => builder %>
+									
+						<% end %>
+
+				</div>
+				<div id="sidebar" class="col-md-2">
+
+					<br><br><br><%= f.submit class: 'btn btn-sm btn-success' %><br>
+
+					<% end %> 
+
+		
+				</div>
+
+				</div>
+		      </div>
+		    </div>
+	</tbody>
+</table>
+
