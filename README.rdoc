@@ -2,6 +2,4 @@
 
 This app was programmed collaboratively with github user tstinghen, using Ruby on Rails and Bootstrap.
 
-This project is in progress.
-
-The version presented here is early, but functional.
+The demo version presented here is early, but functional.  Future versions will include additional features, additional comments, and less repetitive code. This version is fully CRUD operational and is capable of performing the basic functions we intended it to.
